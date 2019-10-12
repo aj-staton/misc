@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# This is a one-file project. I don't need a makefile, but want
+# to simplify my time.
+
+FILE="austinstaton_project2.cpp"
+
+g++ -Wall $FILE -o Aprog
+./Aprog
