@@ -1,4 +1,4 @@
-# csce350 Project 2
+# CSCE350 Project 2
 Project 2 in course at the University of South Carolina--Columbia, taught by Dr. Jason O'Kane in Fall of 2019.
 
 Solving a _Cryptoartithmetic_ Puzzle using exhausive search. Exhausive search, or "brute force" is the straight-forward, simple way to solve a problem.
