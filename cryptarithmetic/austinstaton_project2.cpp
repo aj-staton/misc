@@ -21,6 +21,7 @@ I will be using resources from C++ Docs.
 #include <iostream>
 #include <map>
 #include <string>
+#include <utility>
 
 using std::cin;
 using std::cout;
@@ -28,8 +29,28 @@ using std::endl;
 using std::map;
 using std::string;
 
-int main(int argc, char *argv[]) {
+/*aken directly from techiedelight.com
+*/
+void PrintMap(map<char, int> const &theMap) {
+  for (auto const pair: theMap) {
+    cout << "{" << pair.first << ": " << pair.second << "}" << endl;
+  }
+}
 
+bool IsValid(string addend, string addend2, string end) {
+  int sum = 0;
+  for (int i = 0; i < addend.length(); ++i) {
+  }
+}
+
+int WordToValue(string word, map<char, int> lookup) {
+  int value = 0;
+  for (int i = 0; i < word.length(); ++i) {
+    int letter_value = lookup.at(word.at(i));
+    // TODO: Finish this function computation
+  }
+}
+int main(int argc, char *argv[]) {
   // 1. Take in the input.
   string input;
   cin >> input;
@@ -41,9 +62,21 @@ int main(int argc, char *argv[]) {
   string addend2 = input.substr(delim1+1, delim2-delim1-1);
   string sum = input.substr(delim2+1, input.length());
   
-  // 2. Create permutation of all values for inputs.
+  // 2. Create Table of all letters.
+  int length_sum = input.length() - 2;
+  map<char, int> permutation;
+  for (int i = 0; i < length_sum; ++i) {
+    if (input.at(i) != '+' && input.at(i) != '=') {
+      if (permutation.find(input.at(i)) == permutation.end()){
+        // Give the map an initial value.
+        permutation[input.at(i)] = 0;
+      }
+  }
+  // PrintMap(permutation);
 
-
+  // TODO: For candidate solutions, push_back() values into
+  //       a vector if Criteria is met.
+  
   return 0;
 }
 
